@@ -1,30 +1,38 @@
 <?xml version="1.0" encoding="utf-8"?>
-<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema">
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" 
+           targetNamespace="https://yashmittalz.github.io/cse445_a4" 
+           xmlns="https://yashmittalz.github.io/cse445_a4" 
+           elementFormDefault="qualified">
+
+  <!-- Define the Root Element -->
   <xs:element name="NationalParks">
     <xs:complexType>
       <xs:sequence>
-        <xs:element name="NationalPark" maxOccurs="unbounded">
-          <xs:complexType>
-            <xs:sequence>
-              <xs:element name="Name" type="xs:string" />
-              <xs:element name="Phone" type="xs:string" maxOccurs="unbounded" />
-              <xs:element name="Address">
-                <xs:complexType>
-                  <xs:sequence>
-                    <xs:element name="Number" type="xs:string" />
-                    <xs:element name="Street" type="xs:string" />
-                    <xs:element name="City" type="xs:string" />
-                    <xs:element name="State" type="xs:string" />
-                    <xs:element name="Zip" type="xs:int" />
-                  </xs:sequence>
-                  <xs:attribute name="NearestAirport" type="xs:string" use="required" />
-                </xs:complexType>
-              </xs:element>
-            </xs:sequence>
-            <xs:attribute name="Rating" type="xs:string" use="optional" />
-          </xs:complexType>
-        </xs:element>
+        <xs:element name="NationalPark" type="NationalParkType" maxOccurs="unbounded" />
       </xs:sequence>
     </xs:complexType>
   </xs:element>
+
+  <!-- Define the NationalPark Type -->
+  <xs:complexType name="NationalParkType">
+    <xs:sequence>
+      <xs:element name="Name" type="xs:string" />
+      <xs:element name="Phone" type="xs:string" maxOccurs="unbounded" />
+      <xs:element name="Address" type="AddressType" />
+    </xs:sequence>
+    <xs:attribute name="Rating" type="xs:string" use="optional" />
+  </xs:complexType>
+
+  <!-- Define the Address Type -->
+  <xs:complexType name="AddressType">
+    <xs:sequence>
+      <xs:element name="Number" type="xs:string" />
+      <xs:element name="Street" type="xs:string" />
+      <xs:element name="City" type="xs:string" />
+      <xs:element name="State" type="xs:string" />
+      <xs:element name="Zip" type="xs:int" />
+    </xs:sequence>
+    <xs:attribute name="NearestAirport" type="xs:string" use="required" />
+  </xs:complexType>
+
 </xs:schema>
