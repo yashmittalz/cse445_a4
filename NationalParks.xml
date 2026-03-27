@@ -1,11 +1,14 @@
 <?xml version="1.0" encoding="utf-8"?>
-<NationalParks>
+<NationalParks 
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+    xsi:noNamespaceSchemaLocation="https://yashmittalz.github.io/cse445_a4/NationalParks.xsd">
+    
   <NationalPark Rating="4.9">
     <Name>Grand Canyon</Name>
     <Phone>928-638-7496</Phone>
     <Phone>888-297-2757</Phone>
-    <Phone>866-499-2574</Phone> 
-    <Address NearestAirport="FlagStaff"> 
+    <Phone>866-499-2574</Phone>
+    <Address NearestAirport="FlagStaff">
       <Number>8</Number>
       <Street>S Entrance Road</Street>
       <City>Grand Canyon</City>
@@ -23,5 +26,9 @@
   <NationalPark><Name>Acadia</Name><Phone>207-288-3338</Phone><Address NearestAirport="BGR"><Number>25</Number><Street>Visitor Center Rd</Street><City>Bar Harbor</City><State>ME</State><Zip>04609</Zip></Address></NationalPark>
   <NationalPark Rating="4.4"><Name>Hot Springs</Name><Phone>501-620-6715</Phone><Address NearestAirport="HOT"><Number>101</Number><Street>Reserve St</Street><City>Hot Springs</City><State>AR</State><Zip>71901</Zip></Address></NationalPark>
   <NationalPark><Name>Mount Rainier</Name><Phone>360-569-2211</Phone><Address NearestAirport="SEA"><Number>55210</Number><Street>238th Ave E</Street><City>Ashford</City><State>WA</State><Zip>98304</Zip></Address></NationalPark>
-  <NationalPark Rating="4.8"><Name>Joshua Tree</Name><Phone>760-367-5500</Phone><Address NearestAirport="PSP"><Number>74485</Number><Street>National Park Dr</Street><City>Twentynine Palms</City><State>CA</State><Zip>92277</Zip></Address></NationalPark>
+  <NationalPark Rating="4.8">
+    <Name>Joshua Tree</Name>
+    <Phone>760-367-5500</Phone>
+    <Address NearestAirport="PSP"><Number>74485</Number><Street>National Park Dr</Street><City>Twentynine Palms</City><State>CA</State><Zip>92277</Zip></Address>
+  </NationalPark>
 </NationalParks>
