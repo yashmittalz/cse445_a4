@@ -1,28 +1,21 @@
 <?xml version="1.0" encoding="utf-8"?>
-<!-- ERROR 1: Wrong Root name -->
-<NationalPark> 
-  <!-- Entry 1: ERROR 2: Missing Required Attribute (NearestAirport) -->
-  <NationalPark Rating="4.9">
+<NationalPark> <!-- ERROR 1: Wrong Root name -->
+  <NationalPark NearestAirport="PHX"> <!-- ERROR 2: Missing optional Rating but fine, keeping structure clean -->
     <Name>Grand Canyon</Name>
+    <Name>Second Name Error</Name> <!-- ERROR 3: Duplicate element -->
     <Phone>928-638-7496</Phone>
     <Address><Number>8</Number><Street>S Entrance Road</Street><City>Grand Canyon</City><State>AZ</State><Zip>86023</Zip></Address>
   </NationalPark>
-  <!-- Entry 2: ERROR 3: Missing Required Element (Phone) -->
-  <NationalPark NearestAirport="BZN">
-    <Name>Yellowstone</Name>
-    <Address><Number>2</Number><Street>Grand Loop Rd</Street><City>Yellowstone</City><State>WY</State><Zip>82190</Zip></Address>
-  </NationalPark>
-  <!-- Entry 3: ERROR 5: Duplicate Element (Two Names) -->
-  <NationalPark NearestAirport="YOSE">
+  
+  <NationalPark Rating="4.8"> <!-- ERROR 4: Missing required NearestAirport -->
     <Name>Yosemite</Name>
-    <Name>Yosemite Valley</Name>
     <Phone>209-372-0200</Phone>
     <Address><Number>9035</Number><Street>Village Dr</Street><City>Yosemite</City><State>CA</State><Zip>95389</Zip></Address>
   </NationalPark>
-  <!-- Entry 4: ERROR 4: No closing tag for Address -->
-  <NationalPark NearestAirport="ANC">
-    <Name>Denali</Name>
-    <Phone>907-683-2294</Phone>
-    <Address><Number>1</Number><Street>Park Rd</Street><City>Denali Park</City><State>AK</State><Zip>99755</Zip>
+
+  <NationalPark NearestAirport="BZN">
+    <Name>Yellowstone</Name>
+    <!-- ERROR 5: Phone element is missing entirely -->
+    <Address><Number>2</Number><Street>Grand Loop Rd</Street><City>Yellowstone</City><State>WY</State><Zip>82190</Zip></Address>
   </NationalPark>
 </NationalPark>
